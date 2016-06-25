@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2016 by cirmar (http://jsbin.com/giqecec/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+    <head>
+        <title>JavaScript </title>
+    </head>
+    <body>
+        
+        <p>How many fingers am I holding up?</p>
+        
+        <input type="text" id="guess"/>
+        
+        <p><button id="checkGuess">Guess</button></p>
+
+        
+    <script id="jsbin-javascript">
+document.getElementById("checkGuess").onclick = function() {
+             
+                var randomNumber = Math.random();   //Creates random number between 0 and 1
+                
+                randomNumber = randomNumber * 6;    //Updates randomNumber to be between 0 and 6
+                
+                randomNumber = Math.floor(randomNumber); //Turn randomNumber in a whole number between 0 and 5
+                
+                if(document.getElementById("guess").value == randomNumber) {
+                    
+                    alert("You got it!")
+                    
+                } else {
+                    
+                    alert("Nope! The number was " + randomNumber);
+                }
+                 
+            }
+    
+                
+                /*get a random number between 0 and 5
+                
+                alert (Math.floor(Math.random() * 6));  //Math.floor, gets rid of the decimal point.
+                */
+                
+
+</script>
+</body>
+</html>
